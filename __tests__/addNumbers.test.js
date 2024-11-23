@@ -14,4 +14,9 @@ describe("Add numbers function test suits", () => {
         }
         return expect(resFn).toThrowError('negatives not allowed: -2')
     })
+    it("Should return sum of all numbers after all condition checks", () => {
+        expect(addNumbers("//1\n2;3,4")).toBe(10)
+        expect(addNumbers("//110\n2;3,4")).toBe(119)
+        expect(addNumbers("//1000\n2;3,4")).toBe(1009)
+    })
 })

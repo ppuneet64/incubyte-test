@@ -16,6 +16,7 @@ export function addNumbers(numbers) {
     if (negativeArr.length > 0) {
         throw new Error('negatives not allowed: ' + negativeArr.join(', '));
     }
-
+    // Step 7 return sum of all numbers
+    return numbersArray.reduce((sum, num) => sum + num, 0);
 }
 

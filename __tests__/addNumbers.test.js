@@ -9,10 +9,14 @@ describe("Add numbers function test suits", () => {
         expect(addNumbers("//&$")).toBe(0)
     })
     it("Should throw error  if negative value is provided in string", () => {
-        const resFn = () => {
+        const resFn1 = () => {
             addNumbers("//1;-2,3")
         }
-        return expect(resFn).toThrowError('negatives not allowed: -2')
+        const resFn2 = () => {
+            addNumbers("//1;-2,-3")
+        }
+        expect(resFn1).toThrowError('negatives not allowed: -2')
+        expect(resFn2).toThrowError('negatives not allowed: -2,-3')
     })
     it("Should return sum of all numbers after all condition checks", () => {
         expect(addNumbers("//1\n2;3,4")).toBe(10)

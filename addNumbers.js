@@ -1,4 +1,4 @@
-export function addNumbers(numbers) {
+export const addNumbers = (numbers) => {
     //Step 1 for empty string
     if (!numbers) return 0;
     //Step 2 Extract numbers (this line will extract any positive and negative numbers from string) 
@@ -10,11 +10,10 @@ export function addNumbers(numbers) {
     //Step 4 Convert extracted numbers array into base numbers
     let numbersArray = matches.map(num => parseInt(num, 10));
     //Step5 Check if Numbers array have negative data
-
     let negativeArr = numbersArray.filter(el => el < 0)
     //Step 6 Throw Error if found
     if (negativeArr.length > 0) {
-        throw new Error('negatives not allowed: ' + negativeArr.join(', '));
+        throw new Error('negatives not allowed: ' + negativeArr.join(','));
     }
     // Step 7 return sum of all numbers
     return numbersArray.reduce((sum, num) => sum + num, 0);

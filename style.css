@@ -9,6 +9,12 @@ body {
     align-items: center;
     height: calc(100vh);
 }
+#note {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 12px;
+    text-decoration: underline;
+}
 .heading {
     font-size: 1.5rem;
     color: cadetblue;

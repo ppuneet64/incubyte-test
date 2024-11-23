@@ -5,4 +5,7 @@ describe("Add numbers function test suits", () => {
     it("Should return 0 if no value or empty string is provided", () => {
         expect(addNumbers("")).toBe(0)
     })
+    it("Should return 0 if no numaric value is provided in string", () => {
+        expect(addNumbers("//&$")).toBe(0)
+    })
 })
